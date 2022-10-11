@@ -24,7 +24,7 @@
           nazwa: "wszystkich swietych",
         },
         {
-          data: new Date(2023, 3, 28),
+          data: new Date(2021, 3, 28),
           nazwa: "wakacje maturzystow",
         },
       ];
@@ -36,11 +36,11 @@
         o.innerHTML = elem.nazwa;
         o.addEventListener("click", function () {
           const w = elem.data - teraz;
-          const w2 = parseInt(w / (1000 * 60 * 60 * 24));
+          const w2 = parseInt(elem.data - teraz / (1000 * 60 * 60 * 24));
           if (w > 0) {
             p.innerHTML = "do swieta zostalo " + w2;
           } else {
-            p.innerHTMl = "swieto minelo";
+            p.innerHTML = "swieto minelo";
           }
         });
       });
